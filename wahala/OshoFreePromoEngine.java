@@ -10,6 +10,10 @@ public class OshoFreePromoEngine{
         promoCode = promoCode.toUpperCase();
         double discount = 0;
         
+        if(promoCode == ""){
+            return 0;
+        }
+        
         if (promoCode.equals("STARTER10")) {
             discount = 0.1;
 
@@ -26,9 +30,17 @@ public class OshoFreePromoEngine{
     
     public static double getPriceMinusDiscount(double cartTotal, String promoCode){
         double discount = getDiscountValue(promoCode);
-
-        double finalPrice = cartTotal - (cartTotal * discount);
-
+        double finalPrice = 0;
+        if(cartTotal < 5000){            
+            finalPrice = cartTotal;
+        } else{ 
+            finalPrice = cartTotal - (cartTotal * discount);
+        }
         return finalPrice;
+    }
+    
+    
+    public static void main(String[] args){
+        System.out.println(getPriceMinusDiscount(4000, "starter10"));
     }
 }
