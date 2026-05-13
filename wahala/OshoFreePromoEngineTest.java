@@ -17,15 +17,46 @@ public class OshoFreePromoEngineTest{
         }
 
         
+        
         @Test
-        public void testThatDiscountValueIsCalculatedWhenPromoCodeIsGiven(){
+        public void testThatCartTotalIs5000withPromoCodeProvided(){
             // Arrange
-            double cartTotal = 4000;
+            double cartTotal = 5000;
             double expectedResult = 4500;
             String promoCode = "STARTER10";
             
             // Act
-            double actualResult = OshoFreePromoEngine.getPriceMinusDiscount(cartTotal, promoCode);
+            double actualResult = OshoFreePromoEngine.getFinalPrice(cartTotal, promoCode);
+            
+            // Assert
+            assertEquals(expectedResult, actualResult);
+        }
+        
+        @Test
+        public void testThatCartTotalIs5000withoutPromoCodeProvided(){
+            // Arrange
+            double cartTotal = 5000;
+            double expectedResult = 5000;
+            String promoCode = " ";
+            
+            // Act
+            double actualResult = OshoFreePromoEngine.getFinalPrice(cartTotal, promoCode);
+            
+            // Assert
+            assertEquals(expectedResult, actualResult);
+        }
+        
+        
+        
+        @Test
+        public void testThatDiscountValueIsCalculatedWhenPromoCodeIsGiven(){
+            // Arrange
+            double cartTotal = 4000;
+            double expectedResult = 4000;
+            String promoCode = "STARTER10";
+            
+            // Act
+            double actualResult = OshoFreePromoEngine.getFinalPrice(cartTotal, promoCode);
             
             // Assert
             assertEquals(expectedResult, actualResult);

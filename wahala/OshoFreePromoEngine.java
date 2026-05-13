@@ -28,7 +28,7 @@ public class OshoFreePromoEngine{
     }
 
     
-    public static double getPriceMinusDiscount(double cartTotal, String promoCode){
+    public static double getFinalPrice(double cartTotal, String promoCode){
         double discount = getDiscountValue(promoCode);
         double finalPrice = 0;
         if(cartTotal < 5000){            
@@ -40,7 +40,7 @@ public class OshoFreePromoEngine{
     }
     
     
-    public static void main(String[] args){
-        System.out.println(getPriceMinusDiscount(4000, "starter10"));
-    }
+    // public static void main(String[] args){
+    //     System.out.println(getPriceMinusDiscount(3000, ""));
+    // }
 }
