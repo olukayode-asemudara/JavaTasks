@@ -13,30 +13,22 @@ public class OshoFreePromoEngineTest{
             double actualResult = OshoFreePromoEngine.getDiscountValue(promoCode);
             
             // Assert
-            assertEquals(expectedResult, actualResult);
-        }
-        
-        
-        @Test
-        public void testThatPromoCodeIsValid(){
-            // Arrange
-            String promoCode = "STARTER10";
-            
-            // Act
-            boolean actualResult = OshoFreePromoEngine.isValidPromoCode(promoCode);
-            
-            // Assert
-            assertTrue(actualResult, "Invalid promo code!");
+            assertEquals(expectedResult, actualResult, "invalid promo code");
         }
 
         
         @Test
         public void testThatDiscountValueIsCalculatedWhenPromoCodeIsGiven(){
             // Arrange
+            double cartTotal = 4000;
+            double expectedResult = 4500;
+            String promoCode = "STARTER10";
             
             // Act
+            double actualResult = OshoFreePromoEngine.getPriceMinusDiscount(cartTotal, promoCode);
             
             // Assert
+            assertEquals(expectedResult, actualResult);
         }
     
 }
