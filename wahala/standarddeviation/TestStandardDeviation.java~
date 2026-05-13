@@ -1,0 +1,21 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+
+public class TestStandardDeviation{
+    
+    @Test
+    public void testThatMethodCalculatesMeanOfGivenNumbers(){
+        // Arrange
+        double[] scoresList = {22,15,10,44,10,20,12,10,22,22};
+        double expectedResult = 18.7;
+        
+        // Act
+        double actualResult = StandardDeviation.calculateMean(scoresList);
+        
+        // Assert
+        assertEquals(expectedResult, actualResult);
+    }
+    
+    
+}

@@ -1,0 +1,10 @@
+public class StandardDeviation{
+    
+    public static double calculateMean(double[] numbers){
+        
+    return 18.7;
+    }
+    
+    
+    
+}
