@@ -1,13 +1,16 @@
 public class StandardDeviation{
 
     public static double calculateSum(double[] numbers){
-        
-    return 187;
+        double sum =  0;
+        for(int id = 0; id < numbers.length; id++){
+            sum += numbers[id];
+        }
+        return sum;
     }
     
     public static double calculateMean(double[] numbers){
-        
-    return 18.7;
+        double result = calculateSum(numbers)/numbers.length;
+        return result;
     }
     
     public static double calculateVariance(double[] numbers){
@@ -25,4 +28,27 @@ public class StandardDeviation{
     return 10.33;
     }
     
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // used my main-method to test outputs personally to see
+
+    // public static void main(String[] args){
+    //     double[] scoresList = {22,15,10,44,10,20,12,10,22,22};
+    //     System.out.println(calculateMean(scoresList));
+    // }

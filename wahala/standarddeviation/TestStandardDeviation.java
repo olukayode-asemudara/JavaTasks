@@ -8,10 +8,10 @@ public class TestStandardDeviation{
     public void testThatMethodCalculatesSumOfGivenNumbers(){
         // Arrange
         double[] scoresList = {22,15,10,44,10,20,12,10,22,22};
-        double expectedResult = 187;
+        double expectedResult = 187.0;
         
         // Act
-        double actualResult = StandardDeviation.calculateMean(scoresList);
+        double actualResult = StandardDeviation.calculateSum(scoresList);
         
         // Assert
         assertEquals(expectedResult, actualResult);
@@ -67,7 +67,7 @@ public class TestStandardDeviation{
         double expectedResult = 10.33;
         
         // Act
-        double actualResult = StandardDeviation.getSquaredDifferences(scoresList);
+        double actualResult = StandardDeviation.getStandardDeviation(scoresList);
         
         // Assert
         assertEquals(expectedResult, actualResult);
