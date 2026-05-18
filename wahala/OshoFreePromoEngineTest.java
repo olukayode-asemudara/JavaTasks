@@ -61,5 +61,19 @@ public class OshoFreePromoEngineTest{
             // Assert
             assertEquals(expectedResult, actualResult);
         }
+        
+        // @Test
+        // public void testThatDiscountValueIsLessThan_0_WhenPromoCodeIsGiven(){
+        //     // Arrange
+        //     double cartTotal = -4000;
+        //     double expectedResult = -4000;
+        //     String promoCode = "STARTER10";
+            
+        //     // Act
+        //     double actualResult = OshoFreePromoEngine.getFinalPrice(cartTotal, promoCode);
+            
+        //     // Assert
+        //     assertEquals(expectedResult, actualResult);
+        // }
     
 }

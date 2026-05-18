@@ -1,9 +1,0 @@
-public class SumOfIntegers{
-    public static int sumDigits(long number){
-        
-    }
-
-    public static void main(String[] args){
-        
-    }
-}

@@ -1,6 +1,0 @@
-(Checkerboard Pattern of Asterisks) Write an application that uses only the output statements to display the checkerboard pattern that follows. A System.out.println method call with no arguments causes the program to output a single newline character. [Hint: Iteration statements are required.]
-System.out.print("* ");
-System.out.print(" ");
-System.out.println();
-
-

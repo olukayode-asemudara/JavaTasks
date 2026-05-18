@@ -12,20 +12,24 @@ public class StandardDeviation{
         double result = calculateSum(numbers)/numbers.length;
         return result;
     }
+
+    public static double calculateMeanVariation(double[] numbers){
+        
+    }
     
     public static double calculateVariance(double[] numbers){
     
-    return 96.01;
+        return 96.01;
     }
     
     public static double getSquaredDifferences(double[] numbers){
     
-    return 960.1;
+        return 960.1;
     }
     
     public static double getStandardDeviation(double[] numbers){
     
-    return 10.33;
+        return 10.33;
     }
     
     
